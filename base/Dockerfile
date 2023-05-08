@@ -1,4 +1,6 @@
 FROM ubuntu:latest
+ARG GH_AUTH_TOKEN
+ENV GH_TOKEN=$GH_AUTH_TOKEN
 RUN apt-get update
 RUN type -p curl >/dev/null || (apt update && apt install curl -y)
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg 
@@ -7,8 +9,9 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/g
 RUN apt update 
 RUN apt install gh -y
 RUN apt install -y build-essential
-RUN curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+RUN curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
 RUN tar xzvf nvim-linux64.tar.gz
 RUN mv nvim-linux64 /opt/
 RUN ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
 RUN rm nvim-linux64.tar.gz
+RUN apt-get install -y tmux
