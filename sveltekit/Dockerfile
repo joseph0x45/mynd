@@ -7,5 +7,5 @@ RUN apk add github-cli
 RUN apk add tmux
 RUN apk add curl
 RUN apk add neovim
-RUN npx kuchiyose kitty app -y
+RUN npx kuchiyose kitty /home/app -y
 EXPOSE 5173
