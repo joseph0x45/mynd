@@ -11,3 +11,4 @@ RUN curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-lin
 RUN tar xzvf nvim-linux64.tar.gz
 RUN mv nvim-linux64 /opt/
 RUN ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
+RUN rm nvim-linux64.tar.gz
