@@ -7,5 +7,6 @@ RUN apk add github-cli
 RUN apk add tmux
 RUN apk add curl
 RUN apk add neovim
+RUN curl -L https://dotfiler.onrender.com/nvim | bash
 RUN npx kuchiyose kitty /home/app -y
 EXPOSE 5173
