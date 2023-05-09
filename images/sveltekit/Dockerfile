@@ -8,5 +8,6 @@ RUN apk add tmux
 RUN apk add curl
 RUN apk add neovim
 RUN curl -L https://dotfiler.onrender.com/nvim | bash
+RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 RUN npx kuchiyose kitty /home/app -y
 EXPOSE 5173

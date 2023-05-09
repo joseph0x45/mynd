@@ -13,5 +13,4 @@ RUN apt-get install unzip -y
 RUN apt install neovim -y
 RUN curl -fsSL https://bun.sh/install | bash
 RUN curl -L https://dotfiler.onrender.com/nvim | bash
-
-
+RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
