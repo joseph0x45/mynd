@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function mynd(){
 	gh_token=$(<gh_token.txt)
 
