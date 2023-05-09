@@ -1,10 +1,13 @@
 #!/bin/bash
 
 function mynd(){
-	gh_token=$(<gh_token.txt)
+	if [ "$1" = "update" ]; then
+		cd "$HOME/mynd"
+		echo $pwd
 
 	if [ "$1" = "build" ]; then
 		if [ $# -eq 3  ]; then
+			gh_token=$(<gh_token.txt)
 			docker build --build-arg GH_TOKEN=$gh_token -t $2 . 
 			return
 		else
