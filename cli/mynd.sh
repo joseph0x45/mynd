@@ -3,7 +3,7 @@
 function mynd(){
 	if [ "$1" = "update" ]; then
 		cd "$HOME/mynd"
-		echo $PWD
+		git pull
 	fi
 
 	if [ "$1" = "build" ]; then
