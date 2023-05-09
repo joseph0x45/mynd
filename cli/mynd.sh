@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function mynd(){
+
 	if [ "$1" = "update" ]; then
 		current_dir=$PWD
 		cd "$HOME/mynd"
