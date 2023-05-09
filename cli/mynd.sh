@@ -3,7 +3,7 @@
 function mynd(){
 	if [ "$1" = "update" ]; then
 		cd "$HOME/mynd"
-		echo $pwd
+		echo $PWD
 
 	if [ "$1" = "build" ]; then
 		if [ $# -eq 3  ]; then
