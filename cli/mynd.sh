@@ -4,6 +4,7 @@ function mynd(){
 	if [ "$1" = "update" ]; then
 		cd "$HOME/mynd"
 		echo $PWD
+	fi
 
 	if [ "$1" = "build" ]; then
 		if [ $# -eq 3  ]; then
