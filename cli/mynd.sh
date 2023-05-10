@@ -15,7 +15,7 @@ function mynd(){
 
 	if [ "$1" = "build" ]; then
 		if [ $# -eq 3  ]; then
-			docker build --build-arg GH_TOKEN=$3 -t $2 . 
+			docker build --build-arg gh_token=$3 -t $2 . 
 			return
 		else
 			echo "The build action expects 2 arguments" 
