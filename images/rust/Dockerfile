@@ -1,6 +1,6 @@
 FROM rust:1.69-alpine3.16
 ARG gh_token
-ENV GH_TOKEN=$gh_token
+ENV GH_TOKEN=${gh_token}
 RUN apk update
 RUN apk --no-cache --update add build-base
 RUN apk upgrade
