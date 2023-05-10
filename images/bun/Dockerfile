@@ -1,6 +1,4 @@
 FROM ubuntu:latest
-ARG gh_token
-ENV GH_TOKEN=${gh_token}
 RUN apt update
 RUN apt upgrade
 RUN apt install curl -y

@@ -1,4 +1,4 @@
-FROM rust:1.69-alpine3.16
+FROM denoland/deno:alpine
 RUN apk update
 RUN apk --no-cache --update add build-base
 RUN apk upgrade

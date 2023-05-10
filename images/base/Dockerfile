@@ -1,7 +1,5 @@
 FROM alpine:latest
 RUN apk update
-ARG gh_token
-ENV GH_TOKEN=${gh_token}
 RUN apk --no-cache --update add build-base
 RUN apk upgrade
 RUN apk add bash

@@ -1,6 +1,5 @@
 FROM node:19-alpine
 ARG gh_token
-ENV GH_TOKEN=${gh_token}
 RUN apk update
 RUN apk --no-cache --update add build-base
 RUN apk upgrade
@@ -12,4 +11,3 @@ RUN apk add neovim
 RUN curl -L https://dotfiler.onrender.com/nvim | bash
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 RUN npx kuchiyose kitty /home/app -y
-EXPOSE 5173
