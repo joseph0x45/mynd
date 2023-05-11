@@ -8,10 +8,12 @@ function mynd(){
 	fi
 	
 	if [ "$1" = "update" ]; then
+        echo "⏬ Pulling latest updates"
 		current_dir=$PWD
 		cd "$HOME/mynd"
-		git pull
+		git pull > /dev/null
 		cd "$current_dir"
+        echo "Mynd is up to date. Restart your shell to use the latest version"
 	fi
 
 	if [ "$1" = "build" ]; then
