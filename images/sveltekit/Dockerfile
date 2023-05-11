@@ -1,5 +1,4 @@
 FROM node:19-alpine
-ARG gh_token
 RUN apk update
 RUN apk --no-cache --update add build-base
 RUN apk upgrade

@@ -3,7 +3,7 @@
 function mynd(){
 	
 	if [ "$1" = "version" ]; then
-		echo "mynd 0.0.4"
+		echo "mynd 0.0.5"
         echo "Made by TheWisePigeon <https://github.com/TheWisePigeon>"
 	fi
 	
