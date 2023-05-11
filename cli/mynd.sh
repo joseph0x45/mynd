@@ -13,7 +13,7 @@ function mynd(){
         echo "⏬ Pulling latest updates"
 		current_dir=$PWD
 		cd "$HOME/mynd"
-		git pull > /dev/null
+		git pull 
 		cd "$current_dir"
         echo "Mynd is up to date. Restart your shell to use the latest version"
 	fi
@@ -29,7 +29,7 @@ function mynd(){
 	fi
 
 	if [ "$1" = "new" ]; then
-		if [[ " ${list[@]} =~ " $2 "  " ]]; then
+		if [[ " ${list[@]} " =~ " $2 " ]]; then
             if [[ $# -ge 4 ]]; then
                 port_binding="-p $4"
             fi
