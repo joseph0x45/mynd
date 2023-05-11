@@ -3,7 +3,7 @@
 function mynd(){
 	
 	if [ "$1" = "version" ]; then
-		echo "mynd v-0.0.1"
+		echo "mynd 0.0.2"
 	fi
 	
 	if [ "$1" = "update" ]; then
