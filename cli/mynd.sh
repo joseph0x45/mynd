@@ -2,6 +2,8 @@
 
 function mynd(){
 	
+    images=("kitty", "node", "bun", "rust", "deno")
+
 	if [ "$1" = "version" ]; then
 		echo "mynd 0.6.9"
         echo "Made by TheWisePigeon <https://github.com/TheWisePigeon>"
@@ -27,12 +29,12 @@ function mynd(){
 	fi
 
 	if [ "$1" = "new" ]; then
-		if [ "$2" = "kitty" ]; then
+		if [[ " ${list[@]} =~ " $2 "  " ]]; then
             if [[ $# -ge 4 ]]; then
                 port_binding="-p $4"
             fi
             echo "🔃 Spinning up container and volume"
-            container_id=$(docker run $port_binding -v $3:/data -dit --name $3 kitty)
+            container_id=$(docker run $port_binding -v $3:/data -dit --name $3 $2)
             if [ $? -ne 0 ]; then
                 echo "❌ Failed to create container"
                 echo "$container_id"
@@ -41,6 +43,9 @@ function mynd(){
             echo "✅ Container ready"
             echo "🔗 Connecting to container"
             docker exec -it $container_id  bash
+        else
+            echo "⚠️ Unrecognized image $2"
+            return
 		fi
 	fi
 
