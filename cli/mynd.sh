@@ -29,7 +29,7 @@ function mynd(){
 	fi
 
 	if [ "$1" = "new" ]; then
-		if [[ " ${list[@]} " =~ " $2 " ]]; then
+		if [[ " ${images[@]} " =~ " $2 " ]]; then
             if [[ $# -ge 4 ]]; then
                 port_binding="-p $4"
             fi
