@@ -29,7 +29,7 @@ function mynd(){
                 port_binding="-p $4"
             fi
             echo "🔃 Spinning up container and volume"
-            container_id = $(docker run $port_binding -v $3:/data -dit --name $3 kitty)
+            container_id=$(docker run $port_binding -v $3:/data -dit --name $3 kitty)
             if [ $? -ne 0 ]; then
                 echo "❌ Failed to create container"
                 echo "$container_id"
